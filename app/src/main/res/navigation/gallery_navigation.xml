@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/gallery_navigation"
+    app:startDestination="@id/galleryFragment3">
+    <fragment
+        android:id="@+id/galleryFragment3"
+        android:name="com.example.InstagramUI.view.view.home.Add.GalleryFragment"
+        android:label="fragment_gallery"
+        tools:layout="@layout/fragment_gallery" >
+        <action
+            android:id="@+id/action_galleryFragment3_to_addPostFragment"
+            app:destination="@id/addPostFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPostFragment"
+        android:name="com.example.InstagramUI.view.view.home.Add.AddPostFragment"
+        android:label="fragment_add_post"
+        tools:layout="@layout/fragment_add_post" >
+        <action
+            android:id="@+id/action_addPostFragment_to_mainActivity"
+            app:destination="@id/mainActivity" />
+    </fragment>
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.InstagramUI.view.view.home.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>
